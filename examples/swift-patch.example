@@ -1,0 +1,48 @@
+private enum PatchType: Int {
+  case NONE = 0
+  case VTEXT = 1
+  case VNODE = 2
+  case WIDGET = 3
+  case PROPS = 4
+  case ORDER = 5
+  case INSERT = 6
+  case REMOVE = 7
+  case THUNK = 8
+}
+
+// ...
+
+private func applyPatch(
+  patch: [String: AnyObject],
+  node: UIView) {
+  let type = PatchType(
+    rawValue: patch["type"] as! Int)!
+  let vNode = patch["vNode"]
+    as! [String: AnyObject]
+  let patchInfo = patch["patch"]
+    as! [String: AnyObject]
+
+  switch type {
+  case .VTEXT:
+    stringPatch(node,
+      vNode: vNode,
+      patch: patchInfo)
+  default:
+    print("Unknown PatchType: \(patch["type"])")
+  }
+}
+
+// BEGIN NODE TYPE PATCHERS
+
+private func stringPatch(
+  node: UIView,
+  vNode: [String: AnyObject],
+  patch: [String: AnyObject]) {
+  let newText = patch["text"] as! String
+  let textView = node as! UITextView
+  textView.text = newText
+}
+
+// END NODE TYPE PATCHERS
+
+// ...

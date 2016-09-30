@@ -1,0 +1,3 @@
+createElement(tree:VTree) -> DOMNode
+diff(previous:VTree, current:VTree) -> PatchObject
+patch(root:DOMNode, patches:PatchObject) -> DOMNode

@@ -1,0 +1,16 @@
+{
+  "2": {
+    // TEXT, INSERT, REMOVE,
+    // REORDER, REPLACE, etc.
+    "type": 1,
+    "vNode": {
+      "text": "0"
+    },
+    "patch": {
+      "text": "1"
+    }
+  },
+  "a": {
+    // ... VirtualNode
+  }
+}

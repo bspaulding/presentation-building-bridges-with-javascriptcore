@@ -1,0 +1,14 @@
+import JavaScriptCore
+
+let context = JSContext()
+
+let value = context
+  .evaluateScript("1 + 1")
+
+context.setObject(
+  2,
+  forKeyedSubscript: "x"
+);
+
+let twoX = context
+  .evaluateScript("2 * x")

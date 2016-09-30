@@ -1,0 +1,41 @@
+  private func create(root: UIView, tree: JSValue!) -> () {
+    if tree.valueForProperty("type").toString() == "VirtualText" {
+      let text = tree.valueForProperty("text").toString()
+      if root.isKindOfClass(UITextView) {
+        let textView = root as! UITextView
+        textView.text = text
+      } else if root.isKindOfClass(JSButton) {
+        let button = root as! JSButton
+        button.setTitle(text, forState: .Normal)
+      }
+      return
+    }
+
+    var view : UIView
+    switch tree.valueForProperty("tagName").toString() {
+    case "TEXT":
+      view = UITextView()
+    case "BUTTON":
+      view = JSButton(type: .System)
+      view.tag = 1
+      (view as! JSButton).setProps(
+        tree.valueForProperty("properties"))
+    default:
+      view = UIView()
+      view.clipsToBounds = true
+    }
+
+    root.addSubview(view)
+
+    if let children = tree
+      .valueForProperty("children") {
+      let length = children
+        .valueForProperty("length")
+        .toNumber() as Int
+      for i in 0..<length {
+        let child = children
+          .objectAtIndexedSubscript(i)
+        create(view, tree: child)
+      }
+    }
+  }

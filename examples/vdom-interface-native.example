@@ -1,0 +1,3 @@
+createElement(tree:VTree) -> UIView
+diff(previous:VTree, current:VTree) -> PatchObject
+patch(root:UIView, patches:PatchObject) -> UIView

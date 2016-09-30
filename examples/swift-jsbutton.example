@@ -1,0 +1,30 @@
+import JavaScriptCore
+import UIKit
+
+class JSButton: UIButton {
+  var properties: JSValue?
+
+  func setProps(props: JSValue) {
+    self.properties = props
+
+    if props.hasProperty("onclick") {
+      self.addTarget(self,
+        action: #selector(self.onclick(_:)),
+        forControlEvents: .TouchUpInside)
+    } else {
+      self.removeTarget(self,
+        action: #selector(self.onclick(_:)),
+        forControlEvents: .TouchUpInside)
+    }
+  }
+
+  func onclick(sender: AnyObject?) {
+    if let props = self.properties {
+      if props.hasProperty("onclick") {
+        props
+          .valueForProperty("onclick")
+          .callWithArguments([])
+      }
+    }
+  }
+}

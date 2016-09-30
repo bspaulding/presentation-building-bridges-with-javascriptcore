@@ -1,0 +1,34 @@
+{
+  "tagName": "DIV",
+  "properties": {},
+  "children": [{
+    "tagName": "SPAN",
+    "properties": {},
+    "children": [{
+      "text": "0"
+    }],
+    "namespace": null,
+    "count": 1,
+    "hasWidgets": false,
+    "hasThunks": false,
+    "descendantHooks": false
+  }, {
+    "tagName": "BUTTON",
+    "properties": {
+      onclick: function increment()
+    },
+    "children": [{
+      "text": "Increment"
+    }],
+    "namespace": null,
+    "count": 1,
+    "hasWidgets": false,
+    "hasThunks": false,
+    "descendantHooks": false
+  }],
+  "namespace": null,
+  "count": 4,
+  "hasWidgets": false,
+  "hasThunks": false,
+  "descendantHooks": false
+}

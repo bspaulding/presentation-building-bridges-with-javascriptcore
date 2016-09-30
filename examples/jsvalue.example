@@ -1,0 +1,14 @@
+let value = context
+  .evaluateScript("1 + 1")
+
+value.toString() // "2"
+value.toNumber() // 2
+
+let timesTwoScript =
+  "function(x) { return x * 2; }"
+
+let timesTwo = context
+  .evaluateScript(timesTwoScript)
+
+let four = timesTwo
+  .callWithArguments([2])

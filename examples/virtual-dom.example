@@ -1,0 +1,25 @@
+import { h, createElement, diff, patch } from "virtual-dom";
+
+const CounterApp = ({ count, increment }) => (
+  <div>
+    <span>{count}</span>
+    <button onclick={increment}>
+      Increment
+    </button>
+  </div>
+);
+
+var count = 0;
+
+var tree = CounterApp({ count, increment });
+var rootNode = createElement(tree);
+document.body.appendChild(rootNode);
+
+function increment() {
+  count += 1;
+
+  var newTree = CounterApp({ count, increment });
+  var patches = diff(tree, newTree);
+  rootNode = patch(rootNode, patches);
+  tree = newTree;
+}
