@@ -9,7 +9,6 @@ import {
 	Deck,
 	Fill,
 	Heading,
-	Image,
 	Layout,
 	Link,
 	List,
@@ -59,14 +58,20 @@ export default class Presentation extends React.Component {
 						<Layout>
 							<Fill>
 								<CodePane
-									margin="10px"
 									textSize="16px"
 									lang="jsx"
 									source={require("raw!../examples/counter-app.example")}
 								/>
 							</Fill>
 							<Fill>
-								<Image src={images.counterApp.replace("/", "")} margin="10px" width="80%" />
+								<div
+									style={{
+										backgroundImage: `url(${images.counterApp.replace("/", "")})`,
+										backgroundPosition: "0px -310px",
+										height: "230px",
+										width: "100%"
+									}}
+								/>
 							</Fill>
 						</Layout>
 					</Slide>
