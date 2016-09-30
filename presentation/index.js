@@ -23,8 +23,7 @@ import preloader from "spectacle/lib/utils/preloader";
 import { theme } from "spectacle-theme-solarized-dark";
 
 const images = {
-	counterApp: require("../images/js-bridge-test-demo.gif"),
-	iosLogo: require("../images/Apple_iOS_new.png")
+	counterApp: require("../images/js-bridge-test-demo.gif")
 };
 preloader(images);
 
@@ -360,6 +359,9 @@ export default class Presentation extends React.Component {
 						</Appear>
 						<Appear>
 							<ListItem>UI Library</ListItem>
+						</Appear>
+						<Appear>
+							<ListItem>Android!</ListItem>
 						</Appear>
 						</List>
 					</Slide>
