@@ -66,7 +66,7 @@ export default class Presentation extends React.Component {
 								/>
 							</Fill>
 							<Fill>
-								<Image src={images.counterApp} margin="10px" width="80%" />
+								<Image src={images.counterApp.replace("/", "")} margin="10px" width="80%" />
 							</Fill>
 						</Layout>
 					</Slide>
