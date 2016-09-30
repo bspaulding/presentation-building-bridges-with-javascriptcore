@@ -3,8 +3,11 @@
   - "eslint-config-defaults/configurations/walmart/es6-react"
 
 "rules":
-  "indent": [2, 2, {"SwitchCase": 1}]
+  "indent": [2, "tab", {"SwitchCase": 1}]
   "max-len": 0
+  "filenames/filenames": 0
+  "react/jsx-indent-props": 0
+  "react/jsx-boolean-value": 0
 
 "env":
   "browser": true,
