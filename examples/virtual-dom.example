@@ -1,12 +1,13 @@
 import { h, createElement, diff, patch } from "virtual-dom";
+const [View, Text, Button] = ["View", "Text", "Button"];
 
 const CounterApp = ({ count, increment }) => (
-  <div>
-    <span>{count}</span>
-    <button onclick={increment}>
+  <View>
+    <Text>{count}</Text>
+    <Button onclick={increment}>
       Increment
-    </button>
-  </div>
+    </Button>
+  </View>
 );
 
 var count = 0;

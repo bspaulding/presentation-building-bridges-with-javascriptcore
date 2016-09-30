@@ -175,25 +175,27 @@ export default class Presentation extends React.Component {
 						ranges={[{
 							loc: [0, 1], title: "virtual-dom"
 						}, {
-							loc: [2, 10]
+							loc: [1, 2], title: "tagNames"
 						}, {
-							loc: [11, 12], title: "initial state"
+							loc: [3, 12]
 						}, {
-							loc: [13, 14], title: "render"
+							loc: [12, 13], title: "initial state"
 						}, {
-							loc: [14, 15], title: "make DOMElement"
+							loc: [13, 15], title: "render"
 						}, {
-							loc: [15, 16], title: "append"
+							loc: [15, 16], title: "make DOMElement"
 						}, {
-							loc: [17, 18], title: "handle updates!"
+							loc: [16, 17], title: "append"
 						}, {
-							loc: [18, 19], title: "inc count"
+							loc: [18, 19], title: "handle updates!"
 						}, {
-							loc: [20, 21], title: "just render!"
+							loc: [19, 20], title: "inc count"
 						}, {
-							loc: [21, 22], title: "compute diff"
+							loc: [21, 22], title: "just render!"
 						}, {
-							loc: [22, 23], title: "update the DOM"
+							loc: [22, 23], title: "compute diff"
+						}, {
+							loc: [23, 24], title: "update the DOM"
 						}]}
 					/>
 					<CodeSlide
