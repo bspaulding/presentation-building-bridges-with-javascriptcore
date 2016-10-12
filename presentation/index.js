@@ -24,7 +24,8 @@ import { theme } from "spectacle-theme-solarized-dark";
 
 const images = {
 	counterApp: require("../images/js-bridge-test-demo.gif"),
-	aliceGif: require("../images/alice.gif")
+	aliceGif: require("../images/alice.gif"),
+	stephonThanks: require("../images/stephonThanks.gif")
 };
 preloader(images);
 
@@ -384,6 +385,7 @@ export default class Presentation extends React.Component {
 						<Heading>Thanks!</Heading>
 						<Text margin="20px">github / bspaulding</Text>
 						<Text margin="20px">twitter / @bradspaulding</Text>
+						<Image src={images.stephonThanks.replace("/", "")}/>
 					</Slide>
 				</Deck>
 			</Spectacle>
