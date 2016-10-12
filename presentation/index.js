@@ -9,6 +9,7 @@ import {
 	Deck,
 	Fill,
 	Heading,
+	Image,
 	Layout,
 	Link,
 	List,
@@ -22,7 +23,8 @@ import preloader from "spectacle/lib/utils/preloader";
 import { theme } from "spectacle-theme-solarized-dark";
 
 const images = {
-	counterApp: require("../images/js-bridge-test-demo.gif")
+	counterApp: require("../images/js-bridge-test-demo.gif"),
+	aliceGif: require("../images/alice.gif")
 };
 preloader(images);
 
@@ -150,6 +152,9 @@ export default class Presentation extends React.Component {
 					</Slide>
 					<Slide>
 						<Heading fit>What about React?</Heading>
+						<Appear>
+							<Image src={images.aliceGif.replace("/", "")} />
+						</Appear>
 						<Appear>
 							<Text>Let's do something simpler...</Text>
 						</Appear>
