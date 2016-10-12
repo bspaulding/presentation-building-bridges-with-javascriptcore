@@ -84,7 +84,7 @@ export default class Presentation extends React.Component {
 						<Heading fit textColor="secondary">JavaScript Bridge</Heading>
 						</Appear>
 					</Slide>
-					<Slide>
+					<Slide notes={'NOT the JS engine of the same name!'}>
 						<Heading fit>JavaScriptCore</Heading>
 						<Text margin="20px 0px">(iOS Only)</Text>
 						<Layout>
@@ -196,7 +196,7 @@ export default class Presentation extends React.Component {
 						}, {
 							loc: [15, 16], title: "make DOMElement"
 						}, {
-							loc: [16, 17], title: "append"
+							loc: [16, 17], title: "append (web)"
 						}, {
 							loc: [18, 19], title: "handle updates!"
 						}, {
@@ -361,7 +361,7 @@ export default class Presentation extends React.Component {
 							<Text textSize={16} margin="20px 0px 0px">github.com/bspaulding/JSBridgeTest</Text>
 						</Link>
 					</Slide>
-					<Slide>
+					<Slide notes={'Say What you understand now!'}>
 						<Heading fit>What's Missing?</Heading>
 						<List>
 						<Appear>
