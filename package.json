@@ -18,7 +18,8 @@
     "react-dom": "^15.2.1",
     "spectacle": "^1.0.0",
     "spectacle-code-slide": "github:bspaulding/spectacle-code-slide#multi-loc",
-    "spectacle-theme-solarized-dark": "1.0.2"
+    "spectacle-theme-solarized-dark": "1.0.2",
+    "spectacle-theme-solarized-light": "1.0.0"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
