@@ -20,7 +20,7 @@ import {
 } from "spectacle";
 import CodeSlide from "spectacle-code-slide";
 import preloader from "spectacle/lib/utils/preloader";
-import { theme } from "spectacle-theme-solarized-dark";
+import { theme } from "spectacle-theme-solarized-light";
 
 const images = {
 	counterApp: require("../images/js-bridge-test-demo.gif"),
